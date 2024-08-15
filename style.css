@@ -38,8 +38,8 @@ main {
     overflow: hidden;
 }
 
-div.one {
-    background-color: var(--soft-violet);
+div.container1 {
+    background-color: rgb(120, 17, 179);
 }
 
 img {
@@ -48,7 +48,7 @@ img {
     opacity: 0.5;
 }
 
-div.two {
+div.container2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -63,9 +63,18 @@ div.stats {
     gap: 20px;
 }
 
+
+div.description h1 {
+    margin-bottom: 15px;
+}
+
 h1 {
     color: var(--white);
     font-family: "Inter", sans-serif;
+}
+
+h1 .soft-violet {
+    color: var(--soft-violet);
 }
 
 p {
@@ -73,6 +82,36 @@ p {
     font-family: "Lexend Deca", sans-serif;
 }
 
+.stats p {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        display: flex;
+        max-width: 1100px;
+        max-height: 400px;
+    }
+
+
+    div.container1 {
+        flex-basis: 50%;
+        order: 2;
+    }
+
+    div.container2 {
+        display: flex;
+        justify-content: space-around;
+        text-align: start;
+        flex-basis: 50%;
+        padding: 45px;
+    }
+
+    div.stats {
+        flex-direction: row;
+    }
+}
 
 .attribution { font-size: 1rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
